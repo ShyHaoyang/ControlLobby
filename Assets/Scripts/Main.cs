@@ -16,7 +16,15 @@ public class Main : MonoBehaviour
 
     void Update()
     {
-        
+        if (replyQueue.Count != 0)
+        {
+            Debug.Log(replyQueue.Dequeue());
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            UDPManager.Instance.Report("123123123");
+        }
     }
 
     private void OnDestroy()
