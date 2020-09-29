@@ -9,7 +9,7 @@ public class Main : MonoBehaviour
 
     void Start()
     {
-        UDPManager.Instance.SetUp("127.0.0.1", 9090, 8080);
+        UDPManager.Instance.SetUp("172.16.3.255", 9090, 8080);
         UDPManager.Instance.Run();
         UDPManager.Instance.onReply = OnReply;
     }
